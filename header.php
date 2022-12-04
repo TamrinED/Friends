@@ -20,7 +20,7 @@
         <a class="nav-link" href="reservation.php">Reservation Information</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="payment.php">Oayment Information</a>
+        <a class="nav-link" href="payment.php">Payment Information</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="room.php">Room Information</a>
