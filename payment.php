@@ -1,14 +1,15 @@
 <?php require_once("header.php"); ?>
 <body>
 
-<h1>Payments</h1>
+ <h1 style="text-align:center; font-family:Serif;  font-size:4rem">Payments</h1>
+    <table style="background-color:#CFD8DC" class="table table-striped">
  
 <table class="table table-striped">
   <thead>
     <tr>
       <th>Payment ID</th>
       <th>Guest Name</th>
-      <th>Payenment Type</th>     
+      <th>Payment Type</th>     
     </tr>
   </thead>
   <tbody>
