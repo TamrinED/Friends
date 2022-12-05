@@ -1,4 +1,5 @@
 <?php require_once("header.php"); ?>
+<body>
 
 <h1>Reservations</h1>
     <h4> The following information is what guest corresponds to the reservation and which type of room they recieve!</h4>
