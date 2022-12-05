@@ -4,7 +4,7 @@
     <h1 style="text-align:center; font-family:Serif;  font-size:4rem">Reservations</h1>
     <table style="background-color:#CFD8DC" class="table table-striped">
 
-<table class="table table-striped">
+<table style="background-color:#CFD8DC" class="table table-striped">
   <thead>
     <tr>
       <th>ReservationID</th>
