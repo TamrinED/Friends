@@ -2,7 +2,7 @@
 <body>
 
 <h1>Payments</h1>
-    <h4> The following is a list of the guests in our database with what type of payment they used!</h4>
+ 
 <table class="table table-striped">
   <thead>
     <tr>
