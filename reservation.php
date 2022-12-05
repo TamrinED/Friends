@@ -26,7 +26,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select * from Reservation";
+$sql = "select r.ReservationID, r.Adults, r.Children, g.Name, t.RoomType from Reservation r join Guest g on g.GuestID = r.GuestID join
+Room t on t.RoomID =  r.RoomID where t.RoomID=";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
