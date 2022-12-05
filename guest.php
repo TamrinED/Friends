@@ -1,6 +1,6 @@
 <?php require_once("header.php"); ?>
 
-<h1 style="text-align:center", "font-family:Serif;">Guests</h1>
+<h1 style="text-align:center; font-family:Serif;">Guests</h1>
 <table style="background-color:#CFD8DC" class="table table-striped">
   <thead>
     <tr>
