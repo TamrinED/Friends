@@ -23,7 +23,7 @@ var data = [{
 var layout = {
   xaxis: {range: [1, 12], title: "Months"},
   yaxis: {range: [10, 200], title: "Reservations"},  
-  title: "House Prices vs. Size"
+  title: "Reservations by Month"
 };
 
 // Display using Plotly
