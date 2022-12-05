@@ -4,7 +4,6 @@
     <h1 style="text-align:center; font-family:Serif;  font-size:4rem">Reservations</h1>
     <table style="background-color:#CFD8DC" class="table table-striped">
 
-    <h4> The following information is what guest corresponds to the reservation and which type of room they recieve!</h4>
 <table class="table table-striped">
   <thead>
     <tr>
