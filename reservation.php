@@ -8,8 +8,8 @@
       <th>ReservationID</th>
       <th>Adults</th>
       <th>Children</th>
-      <th>GuestID</th>
-       <th>RoomID</th>
+      <th>Guest Name who made Reservation</th>
+       <th>Room Type </th>
     </tr>
   </thead>
   <tbody>
