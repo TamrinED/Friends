@@ -1,4 +1,4 @@
-
+<?php require_once("header.php"); ?>
 
 <div id="myPlot" style="width:100%;max-width:700px"></div>
 
@@ -23,3 +23,5 @@ var layout = {
 // Display using Plotly
 Plotly.newPlot("myPlot", data, layout);
 </script>
+
+<?php require_once("footer.php"); ?>
