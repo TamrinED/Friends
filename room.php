@@ -1,5 +1,6 @@
 <?php require_once("header.php"); ?>
 
+<body>
 <div id="myPlot" style="width:100%;max-width:700px"></div>
 
 <script>
