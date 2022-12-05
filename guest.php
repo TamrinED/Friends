@@ -1,7 +1,7 @@
 <?php require_once("header.php"); ?>
 
 <h1>Guests</h1>
-<table class="table table-striped">
+<table style="background-color:#33475b" class="table table-striped">
   <thead>
     <tr>
       <th>GuesttID</th>
