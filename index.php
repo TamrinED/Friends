@@ -1,8 +1,8 @@
 <?php require_once("header.php"); ?>
 
 
-<h1 style="text-align: center;">Hotel Reservations</h1>
-<h2 style="text-align: center;">Hello welcome to our website! On this website you can find infromation about our guests reservations, their payment type, and what room they receive.</h2>
+<h1 style="text-align:center; font-family:Serif;  font-size:4rem">Hotel Reservations</h1>
+<h2 style="text-align:center; font-family:Serif">Hello welcome to our website! On this website you can find infromation about our guests reservations, their payment type, and what room they receive.</h2>
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <body>
