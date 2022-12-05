@@ -7,7 +7,7 @@
     <tr>
       <th>ReservationID</th>
       <th>Adults</th>
-      <th>Childern</th>
+      <th>Children</th>
       <th>GuestID</th>
        <th>RoomID</th>
     </tr>
@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
   <tr>
     <td><?=$row["ReservationID"]?></td>
     <td><?=$row["Adults"]?></td>
-    <td><?=$row["Childern"]?></td>
+    <td><?=$row["Children"]?></td>
     <td><?=$row["Name"]?></td>
     <td><?=$row["RoomType"]?></td>
   </tr>
