@@ -1,22 +1,23 @@
 <?php require_once("header.php"); ?>
 
-<h1>Appointments</h1>
-    <h4> The following information is whose patient ID number corresponds to the appointment day and which doctors ID number they are seeing</h4>
+<h1>Reservations</h1>
+    <h4> The following information is what guest corresponds to the reservation and which type of room they recieve!</h4>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ApptID</th>
-      <th>ApptDay</th>
-      <th>PatientID</th>
-      <th>DoctorID</th>
+      <th>ReservationID</th>
+      <th>Adults</th>
+      <th>Childern</th>
+      <th>GuestID</th>
+       <th>RoomID</th>
     </tr>
   </thead>
   <tbody>
     <?php
 $servername = "localhost";
-$username = "rebeccca_ruser";
-$password = "WL]8Dmr[Qag6";
-$dbname = "rebeccca_MIS";
+$username = "tamrined_Friends";
+$password = "Friends2022";
+$dbname = "tamrined_Friends";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -25,7 +26,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select * from Appointment";
+$sql = "select * from Reservation";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -33,10 +34,11 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["ApptID"]?></td>
-    <td><?=$row["ApptDay"]?></td>
-    <td><?=$row["DoctorName"]?></td>
-    <td><?=$row["PatientID"]?></td>
+    <td><?=$row["ReservationID"]?></td>
+    <td><?=$row["Adults"]?></td>
+    <td><?=$row["Childern"]?></td>
+    <td><?=$row["Name"]?></td>
+    <td><?=$row["RoomType"]?></td>
   </tr>
 <?php
   }
