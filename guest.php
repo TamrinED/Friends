@@ -18,9 +18,9 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   switch ($_POST['saveType']) {
     case 'Add':
-      $sqlAdd = "insert into Guest (Name) value (?)";
+      $sqlAdd = "insert into Guest (Name, Email, Phone) value (?, ?, ?)";
       $stmtAdd = $conn->prepare($sqlAdd);
-      $stmtAdd->bind_param("s", $_POST['iName']);
+      $stmtAdd->bind_param("s", $_POST['iName'], $_POST['iEmail'], $_POST['iPhone']);
       $stmtAdd->execute();
       echo '<div class="alert alert-success" role="alert">New guest added.</div>';
       break;
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <table style="background-color:#CFD8DC" class="table table-striped">
   <thead>
     <tr>
-      <th>Guest ID</th>
+      <th>GuesttID</th>
       <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
@@ -144,7 +144,11 @@ $conn->close();
                 <div class="mb-3">
                   <label for="Name" class="form-label">Guest Name</label>
                   <input type="text" class="form-control" id="Name" aria-describedby="nameHelp" name="iName">
-                  <div id="nameHelp" class="form-text">Enter the Guest's name.</div>
+                   <label for="Name" class="form-label">Guest Email</label>
+                  <input type="text" class="form-control" id="Email" aria-describedby="emailHelp" name="iEmail">
+                   <label for="Name" class="form-label">Guest Phone Number</label>
+                  <input type="text" class="form-control" id="Phone" aria-describedby="phoneHelp" name="iPhone">
+                  <div id="nameHelp" class="form-text">Enter the Guest's information.</div>
                 </div>
                 <input type="hidden" name="saveType" value="Add">
                 <button type="submit" class="btn btn-primary">Submit</button>
