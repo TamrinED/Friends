@@ -85,7 +85,7 @@ if ($result->num_rows > 0) {
                           <label for="editGuest<?=$row["GuestID"]?>Name" class="form-label">Guest Name</label>
                           <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Name" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iName" value="<?=$row['Name']?>">
                            <label for="editGuest<?=$row["GuestID"]?>Email" class="form-label">Guest Email</label>
-                          <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Email" aria-describedby="editGuest<?=$row["Email"]?>Help" name="iEmail" value="<?=$row['Email']?>">
+                          <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Email" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iEmail" value="<?=$row['Email']?>">
                           <div id="editGuest<?=$row["GuestID"]?>Help" class="form-text">Enter the guest's information.</div>
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['GuestID']?>">
