@@ -3,18 +3,7 @@
   
 <div class="container">
   
-<h1 style="text-align:center; font-family:Serif;  font-size:4rem">Guests</h1>
-<table style="background-color:#CFD8DC" class="table table-striped">
-  <thead>
-    <tr>
-      <th>GuesttID</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php
+  <?php
 $servername = "localhost";
 $username = "tamrined_Friends";
 $password = "Friends2022";
@@ -26,7 +15,46 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  switch ($_POST['saveType']) {
+    case 'Add':
+      $sqlAdd = "insert into Guest (Name) value (?)";
+      $stmtAdd = $conn->prepare($sqlAdd);
+      $stmtAdd->bind_param("s", $_POST['iName']);
+      $stmtAdd->execute();
+      echo '<div class="alert alert-success" role="alert">New guest added.</div>';
+      break;
+    case 'Edit':
+      $sqlEdit = "update Guest set Name=? where GuestID=?";
+      $stmtEdit = $conn->prepare($sqlEdit);
+      $stmtEdit->bind_param("si", $_POST['iName'], $_POST['iid']);
+      $stmtEdit->execute();
+      echo '<div class="alert alert-success" role="alert">Guest edited.</div>';
+      break;
+    case 'Delete':
+      $sqlDelete = "delete from Guest where GuestID=?";
+      $stmtDelete = $conn->prepare($sqlDelete);
+      $stmtDelete->bind_param("i", $_POST['iid']);
+      $stmtDelete->execute();
+      echo '<div class="alert alert-success" role="alert">Guest deleted.</div>';
+      break;
+  }
+}
+?>  
+  
+<h1 style="text-align:center; font-family:Serif;  font-size:4rem">Guests</h1>
+<table style="background-color:#CFD8DC" class="table table-striped">
+  <thead>
+    <tr>
+      <th>GuesttID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
 
+<?php  
 $sql = "SELECT GuestID, Name, Email, Phone from Guest";
 $result = $conn->query($sql);
 
@@ -39,7 +67,44 @@ if ($result->num_rows > 0) {
     <td><?=$row["Name"]?></td>
     <td><?=$row["Email"]?></td>
     <td><?=$row["Phone"]?></td>
-  </tr>
+    
+    <td>
+    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editGuest<?=$row["GuestID"]?>">
+                Edit
+              </button>
+              <div class="modal fade" id="editGuest<?=$row["GuestID"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editGuest<?=$row["GuestID"]?>Label" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="editGuest<?=$row["GuestID"]?>Label">Edit Guest</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form method="post" action="">
+                        <div class="mb-3">
+                          <label for="editGuest<?=$row["GuestID"]?>Name" class="form-label">Guest Name</label>
+                          <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Name" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iName" value="<?=$row['Name']?>">
+                          <div id="editGuest<?=$row["GuestID"]?>Help" class="form-text">Enter the Guest's name.</div>
+                        </div>
+                        <input type="hidden" name="iid" value="<?=$row['GuestID']?>">
+                        <input type="hidden" name="saveType" value="Edit">
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <form method="post" action="">
+                <input type="hidden" name="iid" value="<?=$row["GuestID"]?>" />
+                <input type="hidden" name="saveType" value="Delete">
+                <input type="submit" class="btn" onclick="return confirm('Are you sure?')" value="Delete">
+              </form>
+            </td> 
+  </td>        
+</tr>
+  
 <?php
   }
 } else {
@@ -49,6 +114,34 @@ $conn->close();
 ?>
   </tbody>
     </table>
-  </div>
+  <br />
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addGuest">
+        Add New
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="addGuest" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addGuestLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="addGuestLabel">Add Guest</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="">
+                <div class="mb-3">
+                  <label for="Name" class="form-label">Guest Name</label>
+                  <input type="text" class="form-control" id="Name" aria-describedby="nameHelp" name="iName">
+                  <div id="nameHelp" class="form-text">Enter the Guest's name.</div>
+                </div>
+                <input type="hidden" name="saveType" value="Add">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   
 <?php require_once("footer.php"); ?>
