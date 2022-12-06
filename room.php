@@ -20,7 +20,6 @@ var data = [{
 var layout = {
   xaxis: {range: [1, 12], title: "Months"},
   yaxis: {range: [10, 200], title: "Rooms Booked"},  
-  line.style.backgroundColor: "black",
   title: "The Number of Rooms Booked by Guests per Month in 2022"
   
 };
