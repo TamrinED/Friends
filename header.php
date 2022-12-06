@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+  <head><link rel="stylesheet" href="EcomProjSS.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hotel Reservations</title>
@@ -29,7 +29,6 @@
   </div>
 </nav> 
   
-    <link rel="stylesheet" href="EcomProjSS.css">
     
   </head>
 <body>
