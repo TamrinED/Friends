@@ -1,5 +1,5 @@
 <?php require_once("header.php"); ?>
-<body>
+
  <div class="container">
      
     <h1 style="text-align:center; font-family:Serif;  font-size:4rem">Reservations</h1>
