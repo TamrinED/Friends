@@ -88,7 +88,7 @@ if ($result->num_rows > 0) {
                           <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Email" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iEmail" value="<?=$row['Email']?>">
                           <div id="editGuest<?=$row["GuestID"]?>Help" class="form-text">Enter the guest's information.</div>
                         </div>
-                        <input type="hidden" name="iid" value="<?=$row['GuestID']?>">
+                        <input type="hidden" name="iid" value="<?=$row['GuestID']?>; <?=$row['Email']?>">
                         <input type="hidden" name="saveType" value="Edit">
                         <input type="submit" class="btn btn-primary" value="Submit">
                       </form>
