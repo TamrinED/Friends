@@ -1,3 +1,7 @@
 ﻿body {
     background-image : url("https://i.pinimg.com/originals/39/47/03/394703864ace3f7c7fe232077f7d12f7.jpg");
 }
+
+script {
+    background-color: blue;
+}
