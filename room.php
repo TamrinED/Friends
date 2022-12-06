@@ -21,6 +21,7 @@ var layout = {
   xaxis: {range: [1, 12], title: "Months"},
   yaxis: {range: [10, 200], title: "Rooms Booked"},  
   title: "The Number of Rooms Booked by Guests per Month in 2022"
+  backgroundColor: "rgba(255,255,255,0.5)"
 };
 
 // Display using Plotly
