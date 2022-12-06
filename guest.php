@@ -84,6 +84,7 @@ if ($result->num_rows > 0) {
                         <div class="mb-3">
                           <label for="editGuest<?=$row["GuestID"]?>Name" class="form-label">Guest Name</label>
                           <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Name" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iName" value="<?=$row['Name']?>">
+                          <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Name" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iName" value="<?=$row['Name']?>">
                           <div id="editGuest<?=$row["GuestID"]?>Help" class="form-text">Enter the Guest's name.</div>
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['GuestID']?>">
