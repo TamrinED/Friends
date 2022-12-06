@@ -25,9 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo '<div class="alert alert-success" role="alert">New guest added.</div>';
       break;
     case 'Edit':
-      $sqlEdit = "update Guest set Name= "iName", Email="iEmail" where GuestID=?";
+      $sqlEdit = "update Guest set Name=? where GuestID=?";
       $stmtEdit = $conn->prepare($sqlEdit);
-      $stmtEdit->bind_param("si", $_POST['iName'], $_POST['iEmail'], $_POST['iid']);
+      $stmtEdit->bind_param("si", $_POST['iName'], $_POST['iid']);
+      $sqlEdit = "update Guest set Email=? where GuestID=?";
+      $stmtEdit = $conn->prepare($sqlEdit);
+      $stmtEdit->bind_param("si", $_POST['iEmail'], $_POST['iid']);
       $stmtEdit->execute();
       echo '<div class="alert alert-success" role="alert">Guest edited.</div>';
       break;
