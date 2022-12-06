@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     case 'Edit':
       $sqlEdit = "update Guest set Name=? where GuestID=?";
       $stmtEdit = $conn->prepare($sqlEdit);
-      $stmtEdit->bind_param("si", $_POST['iName'], $_POST['iid']);
+      $stmtEdit->bind_param("si", $_POST['iName'], $_POST['iid'], $_POST['iEmail']);
       $stmtEdit->execute();
       echo '<div class="alert alert-success" role="alert">Guest edited.</div>';
       break;
@@ -84,7 +84,7 @@ if ($result->num_rows > 0) {
                         <div class="mb-3">
                           <label for="editGuest<?=$row["GuestID"]?>Name" class="form-label">Guest Name</label>
                           <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Name" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iName" value="<?=$row['Name']?>">
-                          <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Name" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iName" value="<?=$row['Name']?>">
+                          <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Email" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iEmail" value="<?=$row['Email']?>">
                           <div id="editGuest<?=$row["GuestID"]?>Help" class="form-text">Enter the Guest's name.</div>
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['GuestID']?>">
