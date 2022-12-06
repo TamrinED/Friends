@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <table style="background-color:#CFD8DC" class="table table-striped">
   <thead>
     <tr>
-      <th>GuesttID</th>
+      <th>Guest ID</th>
       <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
