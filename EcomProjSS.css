@@ -53,3 +53,9 @@ h2 {
   font-size: 16px;
   padding: 16px 32px;
 }
+
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+}
