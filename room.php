@@ -6,7 +6,7 @@
   <h1 style="text-align:center; font-family:Serif;  font-size:4rem"><span id="title">Rooms</span></h1>
     <table style="background-color:#CFD8DC" class="table table-striped">
   
-<div id="myPlot" style="width:100%;max-width:700px"></div>
+<div id="myPlot" style="width:100%;max-width:700px; align:center"></div>
 
 <script>
 var xArray = [1,2,3,4,5,6,7,8,9,10,11,12];
