@@ -23,6 +23,7 @@ h2 {
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
+  float: left;
 }
 
 .middle {
@@ -36,10 +37,12 @@ h2 {
 }
 
 .container:hover .image {
+  float: left;
   opacity: 0.2;
 }
 
 .container:hover .middle {
+  float: left;
   opacity: 1;
 }
 
