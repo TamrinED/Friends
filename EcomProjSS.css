@@ -13,10 +13,9 @@ h2 {
 
 .container {
   position: relative;
-  width: 100%;
+  width: 33%;
     display: inline-block;
     background-color: white;
-    max-width: 25 px;
 }
 
 .image {
