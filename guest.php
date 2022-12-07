@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>  
   
-<h1 style="text-align:center; font-family:Serif;  font-size:4rem">Guests</h1>
+  <h1 style="text-align:center; font-family:Serif;  font-size:4rem"><span id="title">Guests</span></h1>
 <table style="background-color:#CFD8DC" class="table table-striped">
   <thead>
     <tr>
