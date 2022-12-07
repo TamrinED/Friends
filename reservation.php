@@ -11,7 +11,7 @@
       <th>ReservationID</th>
       <th>Adults</th>
       <th>Children</th>
-      <th>Guest Name who made Reservation</th>
+      <th>Guest who made the reservation</th>
        <th>Room Type </th>
     </tr>
   </thead>
