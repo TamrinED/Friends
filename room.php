@@ -1,5 +1,5 @@
 <?php require_once("header.php"); ?>
-
+<center>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <body>
   
@@ -31,5 +31,5 @@ var layout = {
 Plotly.newPlot("myPlot", data, layout);
 </script>
 
-
+      </center>
 <?php require_once("footer.php"); ?>
