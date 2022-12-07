@@ -13,9 +13,7 @@ h2 {
 
 .container {
   position: relative;
-  width: 33%;
-    display: inline-block;
-    background-color: white;
+  width: 100%;
 }
 
 .image {
@@ -52,4 +50,9 @@ h2 {
   padding: 16px 32px;
 }
 
-
+.container .card {
+    display: inline-block;
+    max-width: 25%;
+    height: 500px;
+    background-color:mediumpurple;
+}
