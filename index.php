@@ -8,7 +8,8 @@
   <img src="https://th.bing.com/th/id/OIP.GEA7TEUSNiV4dmfBaDRKWwHaLH?pid=ImgDet&rs=1" alt="Avatar" class="image" style="width:33%">
   <div class="middle">
     <div class="text">CEO, Kyle Robb</div>
-    
+  </div>
+  
      <img src="https://th.bing.com/th/id/OIP.z_qTkVmYdIXDfbvgwxQ2tgHaF7?w=203&h=162&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Avatar" class="image" style="width:33%">
   <div class="middle">
     <div class="text">CFO, fndiafj</div>
