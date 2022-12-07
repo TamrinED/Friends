@@ -11,7 +11,6 @@ h2 {
     //box-shadow: -10px 15px 
 }
 
-<style>
 .container {
   position: relative;
   width: 100%;
@@ -51,7 +50,7 @@ h2 {
   padding: 16px 32px;
 }
 
-.card1 {
+.container:card {
     display: inline-block;
     max-width: 25%;
     height: 500px;
