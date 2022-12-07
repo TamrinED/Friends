@@ -21,10 +21,10 @@ h2 {
   opacity: 1;
   display: block;
   width: 33%;
-  height: auto;
+  height: 20px;
   transition: .5s ease;
   backface-visibility: hidden;
-  float: left;
+  //float: left;
   padding: 20px;
 }
 
@@ -36,13 +36,19 @@ h2 {
     left: 50%;
 }
 
-.container:hover .image {
+.card:hover .image {
   
   width: 100%;
   opacity: 0.2;
 }
 
-.container:hover .middle {
+.card {
+  max-width: 33%;
+  height: 500px;
+  background-color:mediumpurple;
+}
+
+.card:hover .middle {
   
   width: 30px;
   opacity: 1;
@@ -54,10 +60,3 @@ h2 {
   font-size: 16px;
   padding: 16px 32px;
 }
-
-//.container .card {
-//    display: inline-block;
-//    max-width: 25%;
-   // height: 500px;
-  //  background-color:mediumpurple;
-//}
