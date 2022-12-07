@@ -33,7 +33,7 @@ h2 {
 }
 
 .card:hover .image {
-  width: 33%;
+  width: 100%;
   opacity: 0.2;
 }
 
