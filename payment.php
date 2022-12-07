@@ -2,7 +2,7 @@
 
  <div class="container">
   
- <h1 style="text-align:center; font-family:Serif;  font-size:4rem">Payments</h1>
+  <h1 style="text-align:center; font-family:Serif;  font-size:4rem"><span id="title">Payments</span></h1>
     <table style="background-color:#CFD8DC" class="table table-striped">
  
 <table style="background-color:#CFD8DC" class="table table-striped">
