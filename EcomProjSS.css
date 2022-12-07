@@ -19,12 +19,11 @@ h2 {
 .image {
   opacity: 1;
   display: block;
-  width: 100%;
+  width: 200px;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
   float: left;
-  width: 200px;
 }
 
 .middle {
