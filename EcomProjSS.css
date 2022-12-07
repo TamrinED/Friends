@@ -14,7 +14,7 @@ h2 {
 .container {
   position: relative;
   width: 300px;
-  float: left;
+  
 }
 
 .image {
@@ -24,7 +24,7 @@ h2 {
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
-  
+  float: left;
 }
 
 .middle {
