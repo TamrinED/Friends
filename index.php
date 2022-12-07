@@ -7,7 +7,7 @@
 <div class="container">
   <img src="https://th.bing.com/th/id/OIP.GEA7TEUSNiV4dmfBaDRKWwHaLH?pid=ImgDet&rs=1" alt="Avatar" class="image" style="width:25%">
   <div class="middle">
-    <div class="text">Kyle Robb</div>
+    <div class="text">CEO, Kyle Robb</div>
   </div>
 </div>
  
