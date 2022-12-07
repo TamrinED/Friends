@@ -3,5 +3,10 @@
 }
 
 h1 {
-    background-color : blanchedalmond;
+    background-color : white;
+}
+
+#title {
+    background-color: mediumpurple;
+    box-shadow: -10px 15px black;
 }
