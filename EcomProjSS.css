@@ -32,17 +32,27 @@ h2 {
     left: 50%;
 }
 
-.card:hover .image {
+.card1:hover .image {
   width: 33%;
   opacity: 0.2;
 }
 
-.card {
+.card1 {
   max-width: 33%;
   height: 200px;
 }
 
-.card:hover .middle {
+.card2 {
+  max-width: 33%;
+  height: 200px;
+}
+
+.card3 {
+  max-width: 33%;
+  height: 200px;
+}
+
+.card1:hover .middle {
   width: 33%;
   opacity: 1;
 }
