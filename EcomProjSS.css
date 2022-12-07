@@ -13,7 +13,7 @@ h2 {
 
 .container {
   position: relative;
-  width: 300px;
+  width: 100%;
   
 }
 
@@ -40,13 +40,13 @@ h2 {
 
 .container:hover .image {
   
-  width: 300%;
+  width: 100%;
   opacity: 0.2;
 }
 
 .container:hover .middle {
   
-  width: 200px;
+  width: 30px;
   opacity: 1;
 }
 
