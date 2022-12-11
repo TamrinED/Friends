@@ -90,15 +90,13 @@ if ($result->num_rows > 0) {
                         <div class="mb-3">
                           <label for="editGuest<?=$row["GuestID"]?>Name" class="form-label">Guest Name</label>
                           <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Name" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iName" value="<?=$row['Name']?>"><br><br>
-                          <br><br> <label for="editGuest<?=$row["GuestID"]?>Email" class="form-label">Guest Email</label>
+                          <br><label for="editGuest<?=$row["GuestID"]?>Email" class="form-label">Guest Email</label>
                           <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Email" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iEmail" value="<?=$row['Email']?>">
-                          <br><br><label for="editGuest<?=$row["GuestID"]?>Phone" class="form-label">Guest Phone Number</label>
+                          <label for="editGuest<?=$row["GuestID"]?>Phone" class="form-label">Guest Phone Number</label>
                           <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Phone" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iPhone" value="<?=$row['Phone']?>">
                           <div id="editGuest<?=$row["GuestID"]?>Help" class="form-text">Enter the guest's information.</div>
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['GuestID']?>">
-                         <input type="hidden" name="iid" value="<?=$row['Email']?>">
-                         <input type="hidden" name="iid" value="<?=$row['Phone']?>">
                         <input type="hidden" name="saveType" value="Edit">
                         <input type="submit" class="btn btn-primary" value="Submit">
                       </form>
@@ -145,11 +143,11 @@ $conn->close();
               <form method="post" action="">
                 <div class="mb-3">
                   <label for="Name" class="form-label">Guest Name</label>
-                  <input type="text" class="form-control" id="Name" aria-describedby="nameHelp" name="iName">
+                  <input type="text" class="form-control" id="iName" aria-describedby="nameHelp" name="iName"><br>
                    <label for="Name" class="form-label">Guest Email</label>
-                  <input type="text" class="form-control" id="Email" aria-describedby="emailHelp" name="iEmail">
+                  <input type="text" class="form-control" id="iEmail" aria-describedby="emailHelp" name="iEmail"><br>
                    <label for="Name" class="form-label">Guest Phone Number</label>
-                  <input type="text" class="form-control" id="Phone" aria-describedby="phoneHelp" name="iPhone">
+                  <input type="text" class="form-control" id="iPhone" aria-describedby="phoneHelp" name="iPhone"><br>
                   <div id="nameHelp" class="form-text">Enter the Guest's information.</div>
                 </div>
                 <input type="hidden" name="saveType" value="Add">
