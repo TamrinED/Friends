@@ -144,9 +144,9 @@ $conn->close();
                 <div class="mb-3">
                   <label for="Name" class="form-label">Guest Name</label>
                   <input type="text" class="form-control" id="iName" aria-describedby="nameHelp" name="iName"><br>
-                   <label for="Name" class="form-label">Guest Email</label>
+                   <label for="Email" class="form-label">Guest Email</label>
                   <input type="text" class="form-control" id="iEmail" aria-describedby="emailHelp" name="iEmail"><br>
-                   <label for="Name" class="form-label">Guest Phone Number</label>
+                   <label for="Phone" class="form-label">Guest Phone Number</label>
                   <input type="text" class="form-control" id="iPhone" aria-describedby="phoneHelp" name="iPhone"><br>
                   <div id="nameHelp" class="form-text">Enter the Guest's information.</div>
                 </div>
