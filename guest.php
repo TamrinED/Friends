@@ -90,10 +90,10 @@ if ($result->num_rows > 0) {
                         <div class="mb-3">
                           <label for="editGuest<?=$row["GuestID"]?>Name" class="form-label">Guest Name</label>
                           <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Name" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iName" value="<?=$row['Name']?>"><br><br>
-                           <label for="editGuest<?=$row["GuestID"]?>Email" class="form-label">Guest Email</label>
-                          <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Email" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iEmail" value="<?=$row['Email']?>"><br><br>
-                          <label for="editGuest<?=$row["GuestID"]?>Phone" class="form-label">Guest Phone Number</label>
-                          <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Phone" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iPhone" value="<?=$row['Phone']?>"><br><br>
+                          <br><br> <label for="editGuest<?=$row["GuestID"]?>Email" class="form-label">Guest Email</label>
+                          <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Email" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iEmail" value="<?=$row['Email']?>">
+                          <br><br><label for="editGuest<?=$row["GuestID"]?>Phone" class="form-label">Guest Phone Number</label>
+                          <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Phone" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iPhone" value="<?=$row['Phone']?>">
                           <div id="editGuest<?=$row["GuestID"]?>Help" class="form-text">Enter the guest's information.</div>
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['GuestID']?>">
