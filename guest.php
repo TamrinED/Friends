@@ -15,12 +15,16 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
+  $iName = $_POST['iName'];
+  $iEmail = $_POST['iEmail'];
+  $iPhone = $_POST['iPhone'];
+  
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   switch ($_POST['saveType']) {
     case 'Add':
-      $sqlAdd = "insert into Guest values ('iName', 'iEmail', 'iPhone')";
+      $sqlAdd = "insert into Guest (Name, Email, Phone) values (?), (?), (?)";
       $stmtAdd = $conn->prepare($sqlAdd);
-      $stmtAdd->bind_param($_POST['iName'], $_POST['iEmail'], $_POST['iPhone']);
+      $stmtAdd->bind_param("s", $iName, $iEmail, $iPhone);
       $stmtAdd->execute();
       echo '<div class="alert alert-success" role="alert">New guest information added.</div>';
       break;
