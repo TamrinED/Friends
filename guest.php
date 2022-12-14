@@ -19,9 +19,12 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   switch ($_POST['saveType']) {
     case 'Add':
-      $sqlAdd = "INSERT INTO `Guest`(`Name`, `Email`, `Phone`) VALUES ('?', '?', '?')";
+      $gName = $_POST['gName'];
+      $gEmail = $_POST['gEmail'];
+      $gPhone = $_POST['gPhone'];
+      $sqlAdd = "INSERT INTO `Guest`(`Name`, `Email`, `Phone`) VALUES ('$gName', '$gEmail', '$gPhone')";
       $stmtAdd = $conn->prepare($sqlAdd);
-      $stmtAdd->bind_param("s", $_POST['gName'], $_POST['gEmail'], $_POST['gPhone']);
+      //$stmtAdd->bind_param("s", $_POST['gName'], $_POST['gEmail'], $_POST['gPhone']);
       $stmtAdd->execute();
       echo '<div class="alert alert-success" role="alert">New guest information added.</div>';
       break;
