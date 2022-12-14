@@ -2,7 +2,10 @@
 
 <h1 style="text-align:center; font-family:Serif;  font-size:4rem"><span id="title">Utopia Hotel Employee Website</span></h1>
 
-
+<h2> Welcome <?php echo $_POST["name"]; ?><br>
+Your email address is: <?php echo $_POST["email"]; ?>
+</h2>
+  
 <div class="container">
   <div class="column">
   <div class="card">
