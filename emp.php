@@ -4,10 +4,10 @@
 
 <figure class="text-end">
   <blockquote class="blockquote">
-    <p> Welcome<?php echo $_POST["name"]; ?></p>
+    <p><strong> Welcome<?php echo $_POST["name"]; ?></strong></p>
   </blockquote>
-  <figcaption class="blockquote-footer">
-    Your email address is: <cite title="Source Title"><?php echo $_POST["email"]; ?></cite>
+  <figcaption class="blockquote-footer"><strong>
+    Your email address is: <cite title="Source Title"><?php echo $_POST["email"]; ?></cite></strong>
   </figcaption>
 </figure>
   
