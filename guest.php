@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     case 'Add':
       $sqlAdd = "INSERT INTO `Guest`(`Name`, `Email`, `Phone`) VALUES ([?],[?],[?])";
       $stmtAdd = $conn->prepare($sqlAdd);
-      $stmtAdd->bind_param("s", $_POST['iName'], $_POST['iEmail'], $_POST['iPhone']);
+      $stmtAdd->bind_param("s", "$_POST['iName']", "$_POST['iEmail']", "$_POST['iPhone']");
       $stmtAdd->execute();
       echo '<div class="alert alert-success" role="alert">New guest information added.</div>';
       break;
@@ -76,9 +76,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["Phone"]?></td>
     
     <td>
-    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editGuest<?=$row["GuestID"]?>">
-                Edit
-              </button>
+    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editGuest<?=$row["GuestID"]?>">Edit</button>
               <div class="modal fade" id="editGuest<?=$row["GuestID"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editGuest<?=$row["GuestID"]?>Label" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -128,9 +126,7 @@ $conn->close();
 </div>
   <br />
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addGuest">
-        Add New
-      </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addGuest">Add New</button>
 
       <!-- Modal -->
       <div class="modal fade" id="addGuest" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addGuestLabel" aria-hidden="true">
