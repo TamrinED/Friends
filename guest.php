@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   switch ($_POST['saveType']) {
     case 'Add':
-      $sqlAdd = "insert into Guest (Name, Email, Phone) values (?), (?), (?)";
+      $sqlAdd = "insert into Guest values (?), (?), (?)";
       $stmtAdd = $conn->prepare($sqlAdd);
       $stmtAdd->bind_param("s", $_POST['iName'], $_POST['iEmail'], $_POST['iPhone']);
       $stmtAdd->execute();
@@ -89,7 +89,7 @@ if ($result->num_rows > 0) {
                       <form method="post" action="">
                         <div class="mb-3">
                           <label for="editGuest<?=$row["GuestID"]?>Name" class="form-label">Guest Name</label>
-                          <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Name" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iName" value="<?=$row['Name']?>"><br><br>
+                          <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Name" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iName" value="<?=$row['Name']?>">
                           <br><label for="editGuest<?=$row["GuestID"]?>Email" class="form-label">Guest Email</label>
                           <input type="text" class="form-control" id="editGuest<?=$row["GuestID"]?>Email" aria-describedby="editGuest<?=$row["GuestID"]?>Help" name="iEmail" value="<?=$row['Email']?>">
                           <label for="editGuest<?=$row["GuestID"]?>Phone" class="form-label">Guest Phone Number</label>
