@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   switch ($_POST['saveType']) {
     case 'Add':
-      $sqlAdd = "insert into Guest (Name, Email, Phone) values ('?', '?', '?')";
+      $sqlAdd = "insert into Guest (Name, Email, Phone) values ('iName', iEmail', 'iPhone')";
       $stmtAdd = $conn->prepare($sqlAdd);
       $stmtAdd->bind_param($_POST['iName'], $_POST['iEmail'], $_POST['iPhone']);
       $stmtAdd->execute();
