@@ -4,7 +4,7 @@
 
 <figure class="text-end">
   <blockquote class="blockquote">
-    <p style="color: alice blue"><strong> Welcome <?php echo $_POST["name"]; ?></strong></p>
+    <p style="color: aliceblue"><strong> Welcome <?php echo $_POST["name"]; ?></strong></p>
   </blockquote>
   <figcaption class="blockquote-footer"><strong>
     Your email address is: <cite title="Source Title"><?php echo $_POST["email"]; ?></cite></strong>
