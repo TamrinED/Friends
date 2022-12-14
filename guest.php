@@ -144,11 +144,11 @@ $conn->close();
               <form method="post" action="">
                 <div class="mb-3">
                   <label for="Name" class="form-label">Guest Name</label>
-                  <input type="text" class="form-control" id="iName" aria-describedby="nameHelp" name="iName"><br>
+                  <input type="text" class="form-control" id="Name" aria-describedby="nameHelp" name="iName"><br>
                    <label for="Email" class="form-label">Guest Email</label>
-                  <input type="text" class="form-control" id="iEmail" aria-describedby="emailHelp" name="iEmail"><br>
+                  <input type="text" class="form-control" id="Email" aria-describedby="emailHelp" name="iEmail"><br>
                    <label for="Phone" class="form-label">Guest Phone Number</label>
-                  <input type="text" class="form-control" id="iPhone" aria-describedby="phoneHelp" name="iPhone"><br>
+                  <input type="text" class="form-control" id="Phone" aria-describedby="phoneHelp" name="iPhone"><br>
                   <div id="nameHelp" class="form-text">Enter the Guest's information.</div>
                 </div>
                 <input type="hidden" name="saveType" value="Add">
