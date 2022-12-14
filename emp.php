@@ -2,14 +2,7 @@
 
 <h1 style="text-align:center; font-family:Serif;  font-size:4rem"><span id="title">Utopia Hotel Employee Website</span></h1>
 
-<figure class="text-end">
-  <blockquote class="blockquote">
-    <p style="color: aliceblue; background-color: white"><strong> Welcome <?php echo $_POST["name"]; ?></strong></p>
-  </blockquote>
-  <figcaption class="blockquote-footer"><strong>
-    Your email address is: <cite title="Source Title"><?php echo $_POST["email"]; ?></cite></strong>
-  </figcaption>
-</figure>
+    <h2><strong> Welcome <?php echo $_POST["name"]; ?></strong><h2>
   
 <div class="container">
   <div class="column">
