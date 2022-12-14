@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     case 'Add':
       $sqlAdd = "INSERT INTO `Guest`(`Name`, `Email`, `Phone`) VALUES (?), (?), (?)";
       $stmtAdd = $conn->prepare($sqlAdd);
-      $stmtAdd->bind_param("s", $_POST['iName'], $_POST['iEmail'], $_POST['iPhone']);
+      $stmtAdd->bind_param("s", $_POST['gName'], $_POST['gEmail'], $_POST['gPhone']);
       $stmtAdd->execute();
       echo '<div class="alert alert-success" role="alert">New guest information added.</div>';
       break;
@@ -140,11 +140,11 @@ $conn->close();
               <form method="post" action="">
                 <div class="mb-3">
                   <label for="Name" class="form-label">Guest Name</label>
-                  <input type="text" class="form-control" id="Name" aria-describedby="nameHelp" name="iName"><br>
+                  <input type="text" class="form-control" id="Name" aria-describedby="nameHelp" name="gName"><br>
                    <label for="Email" class="form-label">Guest Email</label>
-                  <input type="text" class="form-control" id="Email" aria-describedby="emailHelp" name="iEmail"><br>
+                  <input type="text" class="form-control" id="Email" aria-describedby="emailHelp" name="gEmail"><br>
                    <label for="Phone" class="form-label">Guest Phone Number</label>
-                  <input type="text" class="form-control" id="Phone" aria-describedby="phoneHelp" name="iPhone"><br>
+                  <input type="text" class="form-control" id="Phone" aria-describedby="phoneHelp" name="gPhone"><br>
                   <div id="nameHelp" class="form-text">Enter the Guest's information.</div>
                 </div>
                 <input type="hidden" name="saveType" value="Add">
