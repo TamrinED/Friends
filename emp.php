@@ -3,7 +3,7 @@
 <h1 style="text-align:center; font-family:Serif;  font-size:4rem"><span id="title">Utopia Hotel Employee Website</span></h1>
 
 <figure class="text-end">
-  <blockquote class="blockquote">
+  <blockquote class="blockquote" style="color: alice blue">
     <p><strong> Welcome<?php echo $_POST["name"]; ?></strong></p>
   </blockquote>
   <figcaption class="blockquote-footer"><strong>
