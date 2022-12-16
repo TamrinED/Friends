@@ -32,13 +32,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $sqlEdit = "update Guest set Name=? where GuestID=?";
       $stmtEdit = $conn->prepare($sqlEdit);
       $stmtEdit->bind_param("si", $_POST['iName'], $_POST['iid']);
+      $stmtEdit->execute();
+      
       $sqlEdit = "update Guest set Email=? where GuestID=?";
       $stmtEdit = $conn->prepare($sqlEdit);
       $stmtEdit->bind_param("si", $_POST['iEmail'], $_POST['iid']);
+      $stmtEdit->execute();
+      
       $sqlEdit = "update Guest set Phone=? where GuestID=?";
       $stmtEdit = $conn->prepare($sqlEdit);
       $stmtEdit->bind_param("si", $_POST['iPhone'], $_POST['iid']);
       $stmtEdit->execute();
+      
       echo '<div class="alert alert-success" role="alert">Guest information edited.</div>';
       break;
     case 'Delete':
