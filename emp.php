@@ -2,7 +2,7 @@
 
 <h1 style="text-align:center; font-family:Serif;  font-size:4rem"><span id="title">Utopia Hotel Employee Website</span></h1>
 
-    <h2 style="text-align:center"><strong> Welcome <?php echo $_POST["name"]; ?>, Stay Up-to-Date!</strong><h2>
+    <h2 style="text-align:center"><strong> Welcome <?php echo $_POST["name"]; ?>, Stay Up-to-Date!</strong></h2>
   
 <div class="container">
   <div class="column">
